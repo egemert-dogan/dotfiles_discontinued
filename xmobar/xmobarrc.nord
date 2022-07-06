@@ -1,0 +1,31 @@
+Config { font = "xft:Iosevka Nerd Font:pixelsize=13:antialias=true:hinting=true:bold"
+       , additionalFonts = []
+       , borderColor = "#434C5E"
+       , border = TopB
+       , bgColor = "#434C5E"
+       , fgColor = "#D8DEE9"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "/home/egemert/.config/xmobar/xpm/" -- default: "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run Com "cpu_temp.sh" ["<fn=1>\xf303</fn>"] "" 10
+                    , Run Com "gpu_temp.sh" [] "" 10
+                    , Run Memory ["-t","<used>M/<total>M"] 10
+                    , Run Date "%A %_d %H:%M:%S" "date" 10
+		    , Run Com "uptimei2" [] "" 10
+		    , Run Com "multimedia-info" [] "media-info" 10
+		    , Run Com "getvolume" [] "" 10
+		    , Run UnsafeStdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %UnsafeStdinReader% | <fc=#be616b>%cpu_temp.sh%</fc> | <fc=#81a0c0>%gpu_temp.sh%</fc> | <fc=#eaca8b>%memory%</fc> | <fc=#b58fad>%uptime2%</fc> }\
+                    \{ <fc=#88C0D0>%getvolume%</fc> | <fc=#A3BE8C>%media-info%</fc> | <fc=#D08770>%date%</fc> "
+       }
