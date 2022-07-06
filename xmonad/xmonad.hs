@@ -276,7 +276,7 @@ myStartupHook = do
 	spawnOnce "picom &"
 	spawnOnce "setxkbmap tr &"
 	spawnOnce "numlockx on &"
-	spawnOnce "bash /home/egemert/monitor-settings.sh &"
+	spawnOnce "monitor-settings.sh &"
 
 ------------------------------------------------------------------------
 --Clickable workspaces
@@ -298,7 +298,7 @@ myClickableWorkspaces = clickable . (map xmobarEscape)
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-    xmproc <- spawnPipe "xmobar /home/egemert/.config/xmobar/xmobarrc.dracula"
+    xmproc <- spawnPipe "xmobar /home/sad/.config/xmobar/xmobarrc.dracula"
     xmonad $ docks defaults{
      logHook = dynamicLogWithPP xmobarPP
              { ppOutput = hPutStrLn xmproc
