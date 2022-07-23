@@ -71,16 +71,16 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 3%+"), desc="Raise audio with amixer"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 3%-"), desc="Lower audio with amixer"),
-    Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle"), desc="Mute/Unmute audio with amixer"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5"), desc="Raise audio with amixer"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer -d 5"), desc="Lower audio with amixer"),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer -t"), desc="Mute/Unmute audio with amixer"),
 
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"), desc="Play/Pause media"),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc="Play previous media"),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Play next media"),
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "12345"]
 
 for i in groups:
     keys.extend(
@@ -143,23 +143,23 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(background="#FF87CA", font=myFont),
-                widget.GroupBox(background="#9ADCFF", font=myFont, higlight_method="block", active="#FF8AAE", inactive="#FF8AAE"),
-                widget.Prompt(background="#FCFFA6", foreground="#A1CAE2", font=myFont),
-                widget.WindowName(background="#FCFFA6", foreground="#A1CAE2", font=myFont),
+                widget.CurrentLayout(background="#fab387", font=myFont, foreground="#1e1e2e"),
+                widget.GroupBox(background="#94e2d5", font=myFont, higlight_method="block", active="#1e1e2e", inactive="#1e1e2e"),
+                widget.Prompt(background="#f9e2af", foreground="#1e1e2e", font=myFont),
+                widget.WindowName(background="#b4befe", foreground="#1e1e2e", font=myFont),
                 widget.Chord(
                     font=myFont,
-                    background="#FCFFA6", 
-                    foreground="#716F81",
+                    background="#f9e2af", 
+                    foreground="#1e1e2e",
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.Volume(background="#C6D57E", fmt = 'Vol: {}'),
-                widget.ThermalSensor(background="#B983FF", font=myFont, tag_sensor="edge", fmt="GPU: {}"),
-                widget.ThermalSensor(background="#A1CAE2", font=myFont, fmt="CPU: {}"),
-                widget.Clock(format="%A %H:%M", background="#E5707E", font=myFont),
+                widget.Volume(background="#C6D57E", fmt = 'Vol: {}', foreground="#1e1e2e"),
+                widget.ThermalSensor(background="#f9e2af", font=myFont, tag_sensor="edge", fmt="GPU: {}", foreground="#1e1e2e"),
+                widget.ThermalSensor(background="#89b4fa", font=myFont, fmt="CPU: {}", foreground="#1e1e2e"),
+                widget.Clock(format="%A %H:%M", background="#f38ba8", font=myFont, foreground="#1e1e2e"),
             ],
             24,
             background="#181621",

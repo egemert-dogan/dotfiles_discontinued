@@ -3,16 +3,31 @@
 
 # terminal emulator
 super + Return
-        urxvt
+        st
 # program launcher
-super + d
-        rofi -show drun
+super + space
+        dmenu_run 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#Quit/restart bspwm
-super + shift + {q,r}
+# EWW Keybinds
+super + e
+        eww -c ~/.config/eww/systray open settings-panel 
+
+super + shift + e
+        eww -c ~/.config/eww/systray close settings-panel
+
+super + Print
+	maim "/home/$USER/Pictures/$(date).png" 
+super + shift + x 
+        maim -s -o "/home/$USER/Pictures/$(date).png"  
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -111,12 +126,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-XF86AudioRaiseVolume
-	pamixer -i 5
-
-XF86AudioLowerVolume
-	pamixer -d 5
-
-XF86AudioMute
-	pamixer -t
