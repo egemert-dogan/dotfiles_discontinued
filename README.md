@@ -1,6 +1,6 @@
-##My dotfiles
+## My dotfiles
 
-###ColorSchemes
+### ColorSchemes
 
 - QTile		- Catppuccin
 - XMonad	- Gruvbox (Also available as Dracula) [Currently broken on Arch-Bases systems]
@@ -8,15 +8,15 @@
 - Xresources 	- Everblush
 - i3		- Gruvbox (Dark-ish)
 
-####NOTE: Control config files ownership. Make sure your user own the files
+#### NOTE: Control config files ownership. Make sure your user own the files
 
-###Some photos
+### Some photos
 
-####BSPWM:
+#### BSPWM:
 ![EverBlush](assets/artix-everblush.png)
 
-####QTile:
+#### QTile:
 ![Catppuccin](assets/gentoo-catppuccin.png)
 
-####i3:
+#### i3:
 ![Gruvbox](assets/openbsd-gruvbox.png)
