@@ -1,6 +1,6 @@
 ## My dotfiles
 
-### ColorSchemes
+### Color Schemes
 
 - QTile		- Catppuccin
 - XMonad	- Gruvbox (Also available as Dracula) [Currently broken on Arch-Bases systems]
