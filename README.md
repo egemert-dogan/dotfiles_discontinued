@@ -10,7 +10,7 @@
 
 #### NOTE: Control config files ownership. Make sure your user own the files
 
-### Some photos
+### Previews
 
 #### BSPWM:
 ![EverBlush](assets/artix-everblush.png)
