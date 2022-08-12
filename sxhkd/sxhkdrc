@@ -3,7 +3,7 @@
 
 # terminal emulator
 super + Return
-        urxvt
+        alacritty
 # program launcher
 super + d
         rofi -show drun

@@ -3,8 +3,8 @@
 ### Color Schemes
 
 - QTile		- Catppuccin
-- XMonad	- Gruvbox (Also available as Dracula) [Currently broken on Arch-Bases systems]
-- BSPWM		- Everblush
+- XMonad	- Gruvbox (Also available as Dracula) [Currently broken on Arch-Based systems]
+- BSPWM		- Everblush / Everforest
 - Xresources 	- Everblush
 - i3		- Gruvbox (Dark-ish)
 
