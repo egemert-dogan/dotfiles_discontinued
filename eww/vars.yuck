@@ -1,0 +1,12 @@
+(defpoll HOUR :interval "5s" `date +\"%H\"`)
+(defpoll MIN :interval "5s" `date +\"%M\"`)
+(defpoll DAY :interval "5s" `date +\"%a %d\"`)
+(defpoll MONTH :interval "5s" `date +\"%m\"`)
+
+(defpoll CPU :interval "1s" `scripts/cpu.py`)
+(defpoll MEM :interval "1s" `scripts/mem.py`)
+(defpoll DISK :interval "1s" `scripts/disk.py`)
+
+(defpoll AUDIO :interval "0s" `pamixer --get-volume`)
+
+(defpoll BAT :interval "5s" `cat /tmp/battery-level | rev | cut -c2- | rev | cut -c5-`)

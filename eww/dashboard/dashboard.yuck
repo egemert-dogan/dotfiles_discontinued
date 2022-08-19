@@ -1,0 +1,42 @@
+(defwidget dashboardALL []
+	(box :orientation "v" :spacing 30
+	(clock)
+	(cpu)
+	(mem)
+	(disk)
+	(audio)
+	(ssid)
+	(bat)
+))
+
+(defwidget progressBar [value text class ?boxClass]
+  (box :class boxClass
+  (circular-progress :class class 
+    :value value 
+    :thickness 5
+    text)))
+
+(defwidget clock []
+        (box :class "bg" :orientation "h" :spacing 50 :space-evenly false :vexpand "false" :hexpand "false"
+                (box :orientation "h" :spacing 0
+                        (label :class "hour" :valign "start" :wrap "true" :limit-width 25 :text HOUR)
+                        (label :class "min" :valign "end" :wrap "true" :limit-width 25 :text MIN))))
+(defwidget cpu []
+	(box :orientation "v" :class "bg"
+		(progressBar :class "cpu_prog" :value CPU :text '')))
+(defwidget mem []
+	(box :orientation "v" :class "bg"
+		(progressBar :class "mem_prog" :value MEM :text '')))
+(defwidget disk []
+	(box :orientation "v" :class "bg"
+		(progressBar :class "mem_prog" :value DISK :text '')))
+
+(defwidget audio []
+	(box :orientation "v" :class "bg"
+		(progressBar :class "audio_prog" :value AUDIO :text '墳')))
+(defwidget ssid []
+	(box :orientation "v" :class "bg"
+		(label :class "ssid" :text " FENERBAHCE")))
+(defwidget bat []
+	(box :orientation "v" :class "bg"
+		(progressBar :class "bat_prog" :value BAT :text '')))

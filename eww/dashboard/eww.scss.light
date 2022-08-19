@@ -1,0 +1,53 @@
+* {
+	all: unset;
+	font-family: feather;
+	font-family: Iosevka;
+}
+
+.bg {
+	background-color: #f8f0dc;
+        border-radius: 16px;
+	opacity: 1;
+}
+
+.hour {
+	color: #df69ba;
+	font-size: 70;
+	margin: 15px 0px 0px 20px;
+}
+
+.min {
+	color: #df69ba;
+	font-size: 70;
+	margin: 0px 0px 10px 0px;
+}
+
+.cpu_prog {
+	color: #35a77c;
+	font-size: 24px;
+	margin: 20px;
+}
+
+.mem_prog {
+	color: #dfa000;
+	font-size: 24px;
+	margin: 20px;
+}
+
+.audio_prog {
+	color: #8da101;
+	font-size: 24px;
+	margin: 20px;
+}
+
+.ssid {
+	color: #f85552;
+	font-size: 24px;
+	margin: 20px;
+}
+
+.bat_prog {
+	color: #3a94c5;
+	font-size: 20px;
+	margin: 20px;
+}
