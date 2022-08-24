@@ -1,5 +1,4 @@
 (include "./dashboard/dashboard.yuck")
-(include "./bar/bar.yuck")
 (include "./vars.yuck")
 
 (defwindow dashboard :stacking "fg" :focusable "false" :screen 1 :class "bg"
