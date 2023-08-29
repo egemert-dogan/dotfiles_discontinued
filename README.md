@@ -1,3 +1,5 @@
+# DISCONTINUED
+
 ## My dotfiles
 
 ### Color Schemes
